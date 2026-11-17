@@ -8,9 +8,8 @@ from core.models import Profile
 
 
 async def main():
-    data = await Profile.objects.all()
+    data = Profile.aget_solo()
     print(data)
 
 
 
-main()

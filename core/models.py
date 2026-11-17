@@ -14,7 +14,11 @@ class Profile(SingletonModel):
 
 
 
-    @classmethod
-    def get_profile(cls):
-        data = Profile.objects.all()
-        return data
+    def __str__(self):
+        return 'Profile'
+
+
+
+async def get_profile():
+    data = await Profile.aget_solo()
+    return data

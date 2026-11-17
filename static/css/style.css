@@ -1,0 +1,45 @@
+:root {
+    --background: #eeeeee;
+    --panel: #ffffff;
+    --blue: #0066cc;
+    --light-blue: #33ccff;
+    --accent: #99cc00;
+    --text: #333333;
+}
+
+
+body {
+    background-color: var(--background);
+    font-family: Tahoma, sans-serif;;
+}
+
+
+header {
+    background-color: var(--panel);
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+ul {
+    display: flex;
+    gap: 30px;
+}
+
+li:active {
+    text-decoration: underline;
+
+}
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+main {
+    background-color: var(--blue);
+}

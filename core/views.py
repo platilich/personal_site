@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from core.models import Profile
-
-
+from .models import get_profile
+import asyncio
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    data = asyncio.run(get_profile())
+
+    return render(request, 'index.html', {'data': data})
