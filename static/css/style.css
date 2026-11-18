@@ -11,6 +11,14 @@
 body {
     background-color: var(--background);
     font-family: Tahoma, sans-serif;;
+
+
+    height: 100vh;
+    gap: 30px;
+
+
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -20,6 +28,7 @@ header {
     display: flex;
 
     justify-content: center;
+    padding: 5px;
 
 }
 
@@ -27,6 +36,7 @@ header {
 ul {
     display: flex;
     gap: 30px;
+    margin: 0;
 }
 
 li:active {
@@ -41,5 +51,29 @@ li, a {
 
 
 main {
-    background-color: var(--blue);
+    background-color: var(--panel);
+    height: 100%;
+    flex: 1;
+}
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+
+
+    background-color: var(--panel);
+
+
+    padding: 0 15px 0 5px;
+}
+
+
+.services {
+    display: flex;
+    gap: 30px;
 }

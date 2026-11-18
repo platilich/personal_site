@@ -18,14 +18,16 @@ from django.contrib import admin
 from django.urls import include, path
 
 from core.views import index
-from posts.views import posts
+from posts.views import posts, my_tools, about
 
 
 urlpatterns = [
     path('', index, name='index'),
     path('blog/', posts, name='posts'),
-    path('admin/', admin.site.urls),
+    path('my-tools/', my_tools),
+    path('about/', about),
 
+    path('admin/', admin.site.urls),
     path('ckeditor5/', include('django_ckeditor_5.urls')),
 
 ]
