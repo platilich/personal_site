@@ -10,10 +10,42 @@
 
 
 
-{{ data }}
+<div class="profile">
+    <div class="block me">
+        <img class="image" src="media/{{profile.avatar}}">
+        <h2 class="name">{{ profile.name }}</h2>
+        <p class="specification">{{ profile.specification }}</p>
+        <p>{{ profile.about_me }}</p>
 
-{{ data.name }}
-{{ data.bio }}
+        <div class="buttons">
+            <button>Twitter</button>
+            <button>GitHub</button>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>My best projects</h2>
+
+        <div class="projects_cards">
+            {% for project in projects %}
+            <div class="project_card">
+                <div class="card__header">
+                    <h4>{{ project.title }}</h4>
+                    <p>{{ project.description }}</p>
+                </div>
+                <a href="{{ project.url }}" target="_blank">Open</a>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
 
 
 {% endblock %}

@@ -5,20 +5,31 @@
     --light-blue: #33ccff;
     --accent: #99cc00;
     --text: #333333;
+
+    --border: #acacac;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--background);
     font-family: Tahoma, sans-serif;;
 
 
-    height: 100vh;
+    min-height: 100vh;
+
     gap: 30px;
 
 
+    color: var(--text);
+
     display: flex;
     flex-direction: column;
+
+    margin: 0 auto;
+
 }
 
 
@@ -29,6 +40,7 @@ header {
 
     justify-content: center;
     padding: 5px;
+
 
 }
 
@@ -52,11 +64,105 @@ li, a {
 
 main {
     background-color: var(--panel);
-    height: 100%;
     flex: 1;
+
+    padding: 3%;
+
 }
 
 
+.profile {
+    display: grid;
+    grid-template-columns: 30% 65%;
+    height: 100%;
+
+    gap: 5%;
+}
+
+.block {
+    border: 2px solid var(--border);
+
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px;
+}
+
+
+
+.me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    justify-content: center;
+}
+
+
+.image {
+    width: 70%;
+
+}
+
+
+.name {
+    margin: 3% 5% 0 5%;
+
+}
+
+.specification {
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 5%;
+}
+
+
+
+button {
+    width: 40%;
+    padding: 2%;
+    cursor: pointer;
+}
+
+
+.projects_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+
+.project_card {
+    border: 2px solid var(--border);
+    padding: 0 3% 0 3%;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+
+
+    h4 {
+        margin-bottom: 5px;
+    }
+    p {
+        margin-top: 0;
+    }
+}
 
 
 
@@ -69,11 +175,13 @@ footer {
     background-color: var(--panel);
 
 
-    padding: 0 15px 0 5px;
+    padding: 0 25px 0 25px;
 }
 
 
 .services {
     display: flex;
     gap: 30px;
+
+    align-items: center;
 }
