@@ -19,13 +19,13 @@ class Category(models.Model):
 
 
 
-
 class Posts(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
 
     title = models.CharField(max_length=50, verbose_name='Name of post')
     description = models.CharField(max_length=200, verbose_name='Short description this post')
     created_at = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(null=True, max_length=255, unique=True, db_index=True)
 
     content = RichTextField('Content', config_name='content_field')
 
@@ -37,3 +37,19 @@ class Posts(models.Model):
 
     def __str__(self):
         return f'{self.title} - {self.created_at}'
+
+
+
+
+def get_all_posts():
+    posts = Posts.objects.all()
+
+    return posts
+
+
+
+
+def show_post(post_slug):
+    post = Posts.objects.get(slug=post_slug)
+
+    return post

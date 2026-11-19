@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<hr>
+{{ post.created_at }}
+{{ post.category }}
+<hr>
+{{ post.title }}
+{{ post.description }}
+
+<hr>
+{{ post.content|linebreaks}}
+
+
+
+
+
+{% endblock %}

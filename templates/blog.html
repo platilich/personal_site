@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}Blog{% endblock %}
+
+
+{% block content %}
+
+{% for post in posts %}
+
+<a href="/post/{{post.slug}}/">{{ post.title }}</a>
+
+{% endfor %}
+
+
+{% endblock %}

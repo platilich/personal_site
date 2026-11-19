@@ -18,16 +18,18 @@ from django.contrib import admin
 from django.urls import include, path
 
 from core.views import index
-from posts.views import posts, my_tools, about
+from posts.views import blog, my_tools, about, post_detail
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', index, name='index'),
-    path('blog/', posts, name='posts'),
+    path('', index),
+    path('blog/', blog),
     path('my-tools/', my_tools),
     path('about/', about),
+
+    path('post/<slug:post_slug>/', post_detail),
 
     path('admin/', admin.site.urls),
     path('ckeditor5/', include('django_ckeditor_5.urls')),
