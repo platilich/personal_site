@@ -1,0 +1,23 @@
+.detail_post_block {
+    background-color: var(--background);
+
+    padding: 1%;
+    border: 1px solid var(--border);
+    color: var(--text);
+
+
+
+    height: 100%;
+
+}
+
+
+.button_back {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+
+
+    color: var(--text);
+
+    padding: 5px 10px 5px 10px;
+}

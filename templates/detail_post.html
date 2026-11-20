@@ -1,18 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta_tags %}
+<link rel="stylesheet" href="{% static 'css/post_detail.css' %}">
+{% endblock %}
+
 
 
 {% block content %}
 
-<hr>
-{{ post.created_at }}
-{{ post.category }}
-<hr>
-{{ post.title }}
-{{ post.description }}
+<div class="detail_post_block">
+    <a class="button_back" href="/blog/">Back</a>
+    <p>Date: {{ post.created_at }}</p>
+    <hr>
+    <p>Category: {{ post.category }}</p>
+    <hr>
+    <p>Title: {{ post.title }}</p>
+    <hr>
+    {{ post.content|striptags|linebreaks }}
 
-<hr>
-{{ post.content|linebreaks}}
-
+</div>
 
 
 
