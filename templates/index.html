@@ -9,21 +9,22 @@
 {% block content %}
 
 
-
 <div class="grid_2_column">
-    <div class="block me">
-        <img class="image" src="media/{{profile.avatar}}">
-        <h2 class="name">{{ profile.name }}</h2>
-        <p class="specification">{{ profile.specification }}</p>
-        <p>{{ profile.about_me }}</p>
+    <div class="block">
+        <div class="block__header">
+            <img class="image" src="media/{{profile.avatar}}">
 
-        <div class="buttons">
-            <button>Twitter</button>
-            <button>GitHub</button>
+            <div class="block__header__title">
+                <h2 class="name">{{ profile.name }}</h2>
+                <p class="specification">{{ profile.specification }}</p>
+            </div>
+
         </div>
+
+        <p>{{ profile.about_me }}</p>
     </div>
 
-    <div class="block">
+    <div>
         <h2>My best projects</h2>
 
         <div class="projects_column">
