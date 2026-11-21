@@ -104,10 +104,11 @@ a {
 .grid_2_column {
     display: grid;
     grid-template-columns: 30% 65%;
-    height: 100%;
+    grid-template-rows: repeat(3, 200px);
 
     gap: 5%;
 }
+
 
 .block {
     border: 2px solid var(--border);
@@ -116,8 +117,15 @@ a {
     display: flex;
     flex-direction: column;
 
+
+
+
     padding: 35px;
 }
+
+
+
+
 
 
 .block__header {
@@ -132,8 +140,6 @@ a {
 
 .block__header__title {
     width: 100%;
-    border: 1px solid red;
-
     display: flex;
     flex-direction: column;
 }
@@ -179,16 +185,23 @@ a {
 
 
 
-button {
-    width: 40%;
-    padding: 2%;
-    cursor: pointer;
-}
-
 
 .projects_column {
+    grid-column: 2;
+    grid-row: 1 / 4;
+
+    overflow: auto;
+    min-height: 0;
+
     display: flex;
     flex-direction: column;
+
+
+
+}
+
+.projects_column h2 {
+    margin: 0 0 10px 0;   /* при необходимости задайте нижний отступ */
 }
 
 
